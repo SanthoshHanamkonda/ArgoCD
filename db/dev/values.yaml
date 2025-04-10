@@ -1,9 +1,9 @@
 db:
   name: wp-database
   labels:
-    app: db
+    id: c0925727
     env: dev
-    stack: wordpress
+    app: wordpress
   image:
     repository: mariadb
     tag: 10.6.4-focal
@@ -11,8 +11,8 @@ db:
   replicas: 1
   configmap:
     ## KEY: "value"
-    MYSQL_DATABASE: wordpress
-    MYSQL_USER: wordpress
+    MYSQL_DATABASE: c0925727
+    MYSQL_USER: 3324_user
     APP_ENV: dev
   containerPorts:
       mysql: 3306

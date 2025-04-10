@@ -1,12 +1,12 @@
-wp:
-  name: wpapp
+proxy:
+  name: proxy
   labels:
     id: c0925727
     env: dev
-    app: wordpress
+    app: nginx-proxy
   image:
-    repository: wordpress
-    tag: latest
+    repository: santhu547/nginx-wp
+    tag: v1
     pullPolicy: Always
   replicas: 3
   configmap:
